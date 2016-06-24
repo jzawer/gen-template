@@ -2,7 +2,7 @@ var nunjucks  = require('nunjucks');
 var express   = require('express');
 var app       = express();
 
-app.listen(8080);
+app.listen(8080, '127.0.0.1');
 
 app.use(express.static('node_modules'));
 
