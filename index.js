@@ -2,7 +2,7 @@ var nunjucks  = require('nunjucks');
 var express   = require('express');
 var app       = express();
 
-app.listen(8080);
+app.listen(8080, localhost);
 
 nunjucks.configure('views', {
   autoescape: true,
