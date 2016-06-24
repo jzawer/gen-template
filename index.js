@@ -4,6 +4,8 @@ var app       = express();
 
 app.listen(8080);
 
+app.use(express.static('node_modules'));
+
 nunjucks.configure('views', {
   autoescape: true,
   express   : app
