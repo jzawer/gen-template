@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>WEB GENERATOR</title>
 
 		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" >
 	</head>
@@ -14,35 +14,40 @@
 					<div class="alert alert-success" role="alert">pepe</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">Prueba pepino</h3>
+							<h3 class="panel-title">Web generator</h3>
 						</div>
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<label for="prueba" class="control-label"></label>
-										<input type="input" name="prueba" value="prueba" class="form-control">
+										<label for="titulo" class="control-label">Titulo: </label>
+										<input type="input" name="titulo" value="Titulo" class="form-control">
 									</div>
 									<div class="form-group">
-										<label for="prueba" class="control-label"></label>
-										<input type="input" name="prueba" value="prueba" class="form-control">
+										<label for="url" class="control-label">URL: </label>
+										<input type="input" name="url" value="www.url.es" class="form-control">
 									</div>
 									<div class="form-group">
-										<label for="prueba" class="control-label"></label>
-										<input type="input" name="prueba" value="prueba" class="form-control">
+										<label for="image" class="control-label">Imagen: </label>
+										<input type="file" name="image" value="">
 									</div>
 									<div class="form-group">
-										<label for="prueba" class="control-label"></label>
-										<input type="input" name="prueba" value="prueba" class="form-control">
+										<label for="adress" class="control-label">Direcci&oacute;n</label>
+										<input type="textarea" name="adress" value="Dirección" class="form-control">
 									</div>
 									<div class="form-group">
-										<label for="prueba" class="control-label"></label>
-										<input type="input" name="prueba" value="prueba" class="form-control">
+										<label for="map" class="control-label">Url maps: </label>
+										<input type="input" name="map" value="" class="form-control">
 									</div>
 									<div class="form-group">
-										<label for="prueba" class="control-label"></label>
-										<input type="input" name="prueba" value="prueba" class="form-control">
+										<label for="phone" class="control-label">Tel&eacute;fono</label>
+										<input type="number" name="phone" value="999999999" class="form-control">
 									</div>
+									<div class="form-group">
+										<label for="add_number" class="control-label">A&nacute;adir numero:</label>
+										<input type="button" name="add_number" value="Nuevo Numero" class="form-control">
+									</div>
+									<button id="generate_web" class="btn btn-default">Generar</button>
 								</div>
 							</div>
 						</div>
