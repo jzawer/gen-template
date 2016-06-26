@@ -24,9 +24,21 @@ function connect() {
 }
 
 io.on('connection', function (socket) {
-	socket.on('sayHello', function() {
-		console.log("hi");
+
+	socket.on('hi', function(data) {
+		var form_data = [];
+
+		data.forEach(function(index, element){
+
+			var name_tmp = index.name;
+			var value_tmp = index.value;
+			var tmp = [];
+			tmp[name_tmp] = value_tmp;
+
+			form_data.push(tmp);
+		});
+		console.log(form_data);
 	});
 
-	connect();
+
 });
