@@ -19,10 +19,10 @@
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-12">
-									<form id="new_form">
+									<form id="new_form" method="post" action="/generate">
 										<div class="form-group">
 											<label for="titulo" class="control-label">Titulo: </label>
-											<input type="input" name="titulo" value="Titulo" class="form-control">
+											<input id="Tb_titulo" type="input" name="titulo" value="Titulo" class="form-control">
 										</div>
 										<div class="form-group">
 											<label for="url" class="control-label">URL: </label>
@@ -48,7 +48,7 @@
 											<label for="add_number" class="control-label">A&nacute;adir numero:</label>
 											<input type="button" name="add_number" value="Nuevo Numero" class="form-control">
 										</div>
-										<button id="generate_web" class="btn btn-default">Generar</button>
+										<div id="generate_web" class="btn btn-default">Generar</div>
 									</form>
 								</div>
 							</div>
@@ -58,17 +58,17 @@
 				</div>
 			</div>
 		</div>
-
+		<script src="/socket.io/socket.io.js"></script>
 		<script src="jquery/dist/jquery.js"></script>
 		<script src="bootstrap/dist/js/bootstrap.js"></script>
-		<script src="/socket.io/socket.io.js" charset="utf-8"></script>
-		<!--<script src="js/index.js" charset="utf-8"></script>-->
-		<script type="text/javascript">
-			$(function(){
-				var socket = io.connect();
 
-				socket.emit('hi', $('#new_form').serializeArray());
+		<script>
+			var socket = io.connect();
+
+			$('#generate_web').on('click', function(event) {
+				$('#new_form').submit();
 			});
+
 		</script>
 	</body>
 </html>

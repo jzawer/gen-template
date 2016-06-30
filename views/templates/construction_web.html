@@ -3,8 +3,77 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{{ titulo }}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="robots" content="noindex">
+		<style media="screen">
+			<!--
+			body {
+				color: #666666;
+				background-color: #EEEEEE;
+				font-family: 'Trebuchet MS', sans-serif;
+				font-size: 80%;
+			}
+
+			h2 {
+				font-size: 3em;
+			}
+			h3 {
+				font-size: 2em;
+			}
+
+			#page{
+			width: 60%;
+			margin: 50px auto;
+			padding: 12px;
+			text-align: center;
+			}
+
+			#header{
+			padding: 6px ;
+			text-align: center;
+			}
+
+			.header{
+				background-color: #83A342; color: #FFFFFF;
+			}
+
+			#content {
+			padding: 4px 0 24px 0;
+			}
+
+			#footer {
+			color: #666666;
+			background: #f9f9f9;
+			padding: 10px 20px;
+			border-top: 5px #efefef solid;
+			font-size: 0.8em;
+			text-align: center;
+			}
+
+			#footer a {
+			color: #999999;
+			}
+			-->
+		</style>
 	</head>
 	<body>
-		<span>{{ titulo }}</span>
+		<div id="page">
+			<div id="content">
+				<h2>{{ url }}</h2>
+
+				<img src="logo.png" alt="">
+
+				<h3>Página en construcción</h3>
+				<p>
+					{{ adress }}
+					<br>
+					Telf.: {{ phone }}
+				</p>
+
+				<p>
+					<a style="color: #000000; font-size: 1.25em;" href="https://www.google.es/maps/place/Calle+Alejandro+Goicoechea,+18,+14550+Montilla,+C%C3%B3rdoba/@37.5729621,-4.6593091,19z/data=!3m1!4b1!4m6!1m3!3m2!1s0xd6d1482818ed38b:0xf518c61db3d5e480!2sNicorima!3m1!1s0xd6d1496b7b8e673:0x4a82441d7aa19a19?hl=es">pulse para ver ubicación</a>
+				</p>
+			</div>
+		</div>
 	</body>
 </html>
