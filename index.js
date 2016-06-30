@@ -29,7 +29,7 @@ router.get('/', function(req, res) {
 router.post('/generate', function(req, res) {
 	data = req.body;
 
-	res.render('templates/construction_web.html',data , function(err, html){
+	res.render('templates/construction_web.html', data , function(err, html){
 		if(err) console.log(err);
 		//res.send(html);
 		// trying same but forcing status
