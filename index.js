@@ -1,7 +1,11 @@
 var nunjucks = require('nunjucks');
 var express = require('express');
-var app = express();
 var bodyParser = require('body-parser');
+var multer = require('multer');
+var fs = require('fs');
+
+var app = express();
+var upload = multer({ dest: './views/templates/construction/tmp/'});
 var server = require("http").createServer(app);
 var io = require("socket.io").listen(server);
 var router = express.Router();
@@ -13,6 +17,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 
 app.use(express.static('node_modules'));
 app.use(router);
+app.use(express.static('views/templates/construction/tmp/'));
 
 
 nunjucks.configure('views', {
@@ -26,13 +31,18 @@ router.get('/', function(req, res) {
 	});
 });
 
-router.post('/generate', function(req, res) {
+router.post('/generate', upload.single('image'), function(req, res) {
 	data = req.body;
+	data.image = 'logo';
+	console.log(req.file);
 
-	res.render('templates/construction_web.html', data , function(err, html){
+	fs.renameSync(req.file.path, req.file.destination + 'logo');
+
+	res.render('templates/construction/construction_web.html', data , function(err, html){
 		if(err) console.log(err);
-		//res.send(html);
-		// trying same but forcing status
+
+		console.log(data);
+
 		res.status(200).send(html);
 	});
 });
