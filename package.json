@@ -21,6 +21,7 @@
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.6",
     "express": "^4.14.0",
+    "express-easy-zip": "^1.1.4",
     "jquery": "^2.2.4",
     "multer": "^1.1.0",
     "nunjucks": "^2.4.2",
