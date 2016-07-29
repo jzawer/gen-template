@@ -12,7 +12,7 @@ var server = require("http").createServer(app);
 var io = require("socket.io").listen(server);
 var router = express.Router();
 
-server.listen(8080, '127.0.0.1');
+server.listen(81, '0.0.0.0');
 
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.use(bodyParser.json()); // support json encoded bodies
