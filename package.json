@@ -22,7 +22,7 @@
     "bootstrap": "^3.3.6",
     "express": "^4.14.0",
     "express-easy-zip": "^1.1.4",
-    "jquery": "^2.2.4",
+    "jquery": "^3.0.0",
     "multer": "^1.1.0",
     "nunjucks": "^2.4.2",
     "socket.io": "^1.4.6"
